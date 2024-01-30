@@ -14,4 +14,12 @@ class OperatorSerializer(ModelSerializer):
 class OrderSerializer(ModelSerializer):
     class Meta:
         model = Order
-        fields = '__al__'
+        fields = '__all__'
+
+    extra_kwargs = {
+        "driver": {'read_only': True},
+        'status': {'read_only': True},
+        'grade': {'read_only': True},
+        'waiting_second': {'read_only': True},
+        'total_sum': {'read_only': True}
+    }

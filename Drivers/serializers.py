@@ -10,3 +10,13 @@ class DriverSerialzer(ModelSerializer):
     class Meta:
         model = Driver
         fields = '__all__'
+
+class CusomDriverSerializer(ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['username']
+
+class CustomOperatorSerializer(ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['username', 'password']
